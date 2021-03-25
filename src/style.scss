@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+$colorBlue: rgb(27, 69, 161);
+
+/* Default */
+:focus {
+	outline: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-shadow: none;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	-ms-touch-action: manipulation;
+		touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 16px;
+	line-height: 1.15;
+}
+
+@media (min-width: 2048px) {
+	html {
+		font-size: 0.78125vw;
+	}
+}
+
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to top, rgba(27, 69, 161,0.3), rgba(27, 69, 161,1));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+  color:#fff;
+}
+
+svg,
+img{
+  width: 100%;
+  height: auto;
+}
+
+svg{
+  color: #fff;
+}
+
+/*Grid*/
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+.container-fluid{
+    margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 90%;
+    }
+}
+
+.row{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -25px;
+	margin-left: -25px;
+}
+
+.col{
+	position: relative;
+	width: 100%;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.search_wrapper{
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+input.city_search{
+  border: 1px solid #fff;
+  border-radius: 5px 0 0 5px;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1.25em;
+  width: 100%;
+}
+
+@media(min-width:480px){
+  input.city_search{
+    width: auto;
+  }
+}
+
+button.search_button{
+  border: 1px solid;
+  padding: 0 1.5rem;
+  border-left: 0;
+  border-radius: 0px 5px 5px 0;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif;
+  background: $colorBlue;
+  color: #fff;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.main-wrapper{
+  background: rgba($colorBlue, 0.5);
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.city_date{
+  margin-bottom: 2rem;
+  h1{
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  p{
+    font-size: 1.25em;
+    margin: 0;
+  }
+}
+
+.current_weather_wrapper{
+  border-bottom: 2px solid rgba(255,255,255, 0.5);
+  .current_weather{
+    display: flex;
+      .current_temp_wrapper{
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+      }
+      .weather_icon{
+          width: 11rem;
+      }
+      .current_temp{
+        font-size: 3.75em;
+      }
+      span{
+          font-size: 1em;
+          display: block;
+      }
+  }
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: auto;
+  }
+
+
+@media(min-width:992px){
+  .main-wrapper{
+    padding: 3rem;
+  }
+  .city_date h1{
+    font-size: 3.5em;
+  }
+  .city_date p{
+    font-size: 1.5em;
+  }
+  .main_weather_wrapper{
+    display: flex;
+    align-items: center;
+  }
+  .current_weather_wrapper{
+    padding-right: 3rem;
+    border-right: 2px solid rgba(255,255,255, 0.5);
+    border-bottom: 0;
+  }
+}
+
+
+.other_weather_info{
+  ul{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display:flex;
+    justify-content: space-between;
+  }
+  ul li{
+    display: inline-block;
+  }
+  ul li p{
+    font-size: 1.25em;
+    margin-bottom: 0.5rem;
+  }
+  ul li span{
+    opacity: 0.5;
+  }
+}
+
+@media(min-width:992px){
+  .other_weather_info{
+    ul{
+      padding-left: 3rem;
+    }
+    ul li{
+      width: 125px;
+    }
+  }
+}
+
+.today_weather{
+  text-align: center;
+  padding: 1rem;
+  background: rgba($colorBlue, 0.7);
+  border-radius: 5px;
+}
+
